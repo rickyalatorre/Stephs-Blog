@@ -1,0 +1,17 @@
+<%- include("partials/header"); -%>
+
+<form class="textLeft" action="/oshkosh" method="post">
+  <div class="form-group">
+    <label for="blogTitle" name="blogTitle"> New Blog Title</label>
+    <input id="blogTitle" class="form-control" type="text" name="postTitle" value="" placeholder="enter blog title">
+  </div>
+
+  <div class="form-group">
+    <label for="blogParagraph" name="blogTitle"> New Blog Title</label>
+    <textarea id="blogParagraph" name="postParagraph" class="form-control" placeholder="enter your blog"></textarea>
+  </div>
+  <button class="btn btn-primary" type="submit" name="button">Post</button>
+
+</form>
+
+<%- include("partials/footer"); -%>

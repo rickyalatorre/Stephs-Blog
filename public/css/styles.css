@@ -1,0 +1,165 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Navigation */
+.sidebar {
+  width: 25%;
+  height: 100%;
+  position: fixed;
+}
+
+.brandContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stephsBlog {
+  display: block;
+  position: relative;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #ff427f;
+}
+
+.stephsBlog:hover {
+  text-decoration: none;
+}
+
+ul {
+  padding-top: 20px;
+
+}
+
+ul li {
+  padding: 15px;
+  font-size: 1.5rem;
+
+}
+
+li a{
+    color: #ffa5b0;
+}
+
+/* Main */
+.mainContainer {
+  margin-left: 25%;
+  padding: 2% 10%;
+
+}
+
+.mainImage {
+  width: 50%;
+  height: 50%;
+}
+
+.image-container{
+  display:flex;
+  justify-content: center;
+}
+
+h2{
+  padding: 10px;
+  text-align: center;
+}
+
+.mainHeader {
+  padding: 2rem;
+}
+
+.mainP {
+  padding: 2rem;
+  font-weight: bolder;
+}
+
+.contactInputs {
+  width: 40%
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.icon {
+  display: none;
+}
+
+.off {
+  list-style: none;
+}
+
+.emailIcon{
+  display: flex;
+  justify-content: center;
+}
+
+.emailIcon i{
+  font-size: 5rem;
+}
+
+/* responsive */
+@media only screen and (max-width:666px) {
+
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    background-color: #f1f1f1;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .brandContainer {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .stephsBlog {
+    display: inline-block;
+    font-size: 2rem;
+    padding-left: 20px;
+  }
+
+  .mainContainer {
+    margin-left: 0;
+    padding: 8% 5% 2% 5%;
+  }
+
+  .mainImage {
+    width: 80%;
+    height: 50%;
+  }
+
+  .contactInputs {
+    width: 100%
+  }
+
+  .icon {
+    display: inline-block;
+    position: absolute;
+    margin: 0;
+    right: 10px;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+  }
+
+  .on {
+    display: block;
+    list-style: none;
+  }
+
+  .off {
+    display: none;
+  }
+
+  ul li {
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,18 @@
+<%- include("partials/header"); -%>
+
+<% postsHome.forEach(function(elem){ %>
+  <h1><%= elem.postTitle %></h1>
+  <p><%= elem.postParagraph.slice(0,200) %>
+
+  <a href="http://localhost:3000/posts/<%=elem._id%>">...read more</a>
+
+  </p>
+
+<% }) %>
+
+
+
+
+
+
+<%- include("partials/footer"); -%>
