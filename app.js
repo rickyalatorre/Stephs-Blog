@@ -47,7 +47,7 @@ app.post("/oshkosh", function(req, res) {
 });
 
 
-app.get("/posts/:postId", function(req, res) {
+app.get("/posts/:postId/", function(req, res) {
 
   let postId = req.params.postId;
 
