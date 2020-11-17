@@ -12,7 +12,7 @@ app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-mongoose.connect(process.env.MONGO_PASSWORD, {
+mongoose.connect("mongodb+srv://admin-ricky:pulga1160@cluster0.r9wzo.mongodb.net/stephDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
