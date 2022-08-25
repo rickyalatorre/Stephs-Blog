@@ -8,29 +8,29 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
   <script type="text/javascript">
+  let hamburger= document.querySelector(".hamburger");
 
-
-  let icon= document.querySelector(".icon");
   let uL= document.getElementById("target");
 
   let lightSwitch=false;
 
-  icon.addEventListener("click",function(){
+  hamburger.addEventListener("click",function(){
 
-  if(lightSwitch){
-    uL.classList.remove("on");
-    uL.classList.add("off");
-    lightSwitch=false;
-  }else{
-    uL.classList.remove("off");
-    uL.classList.add("on");
+  if(!lightSwitch){
+    uL.classList.remove("detach");
+    uL.classList.add("attach");
+    hamburger.classList.add('open');
     lightSwitch=true;
+  }else{
+    uL.classList.remove("attach");
+    uL.classList.add("detach");
+    hamburger.classList.remove('open');
+    lightSwitch=false;
   }
 
   });
 
     </script>
-
   </body>
 
   </html>

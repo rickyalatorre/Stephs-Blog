@@ -137,29 +137,91 @@ h2{
     width: 100%
   }
 
-  .icon {
-    display: inline-block;
-    position: absolute;
-    margin: 0;
-    right: 10px;
-    padding: 10px;
-    font-size: 1.5rem;
-    color: black;
-    text-decoration: none;
-  }
-
-  .on {
-    display: block;
-    list-style: none;
-  }
-
-  .off {
-    display: none;
-  }
-
   ul li {
-    padding: 10px;
+    padding: 20px;
     font-size: 1rem;
     font-weight: bold;
   }
+
+/* Hamburger animation css  */
+.hamburger {
+  height:50px;
+  width:50px;
+  background: #D2D1D1;
+  position: relative;
+  margin: 0;
+  right: 10px;
+  padding: 10px;
+  font-size: 1.5rem;
+  text-decoration: none;
+    transition: all 1s ease-in-out;
+}
+
+.line{
+  width:25px;
+  height:5px;
+  transition: all 1s ease-in-out;
+}
+
+.hamburger .first{
+  position: absolute;
+  background-color:#ff427f;
+  left:25%;
+  top:33%;
+  transition: all 1s ease-in-out;
+}
+
+.hamburger .second{
+  position:absolute;
+  background-color: #ff427f;
+  left:25%;
+  bottom:33%;
+  transition: all 1s ease-in-out;
+}
+
+.hamburger.open .first{
+  transform: rotate(45deg)translate(4.33px,4.33px) ;
+}
+
+.hamburger.open .second{
+  transform: rotate(-45deg)translate(4.33px,-4.33px);
+}
+
+
+#target{
+  height:0;
+  padding:0px;
+  margin:0;
+  overflow: hidden;
+}
+
+.attach {
+  animation-name: grow;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes grow {
+  from {
+    height: 0;
+  }
+  to {
+    height: 200px;
+  }
+}
+
+.detach {
+  animation: shrink;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes shrink {
+  from {
+    height: 200px;
+  }
+  to {
+    height: 0;
+  }
+}
+
 }
