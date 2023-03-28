@@ -12,18 +12,25 @@
 
   let uL= document.getElementById("target");
 
+//not clicked
   let lightSwitch=false;
-
+//detects when hamburger is clicked
   hamburger.addEventListener("click",function(){
-
   if(!lightSwitch){
+    //removes animation that lets us shrink the ul
     uL.classList.remove("detach");
+    //adds animation for ul to grow
     uL.classList.add("attach");
+    //animates our hamburger lines to move in a cross
     hamburger.classList.add('open');
+    //we have clicked our hamburger
     lightSwitch=true;
-  }else{
+  }else{//everything is expanded
+    //we remove the ul ability animate growing
     uL.classList.remove("attach");
+    //we add animation of shrinking
     uL.classList.add("detach");
+    //remove animation and the lines revert back to original position
     hamburger.classList.remove('open');
     lightSwitch=false;
   }
