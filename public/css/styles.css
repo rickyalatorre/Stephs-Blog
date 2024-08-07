@@ -99,8 +99,21 @@ h2{
   font-size: 5rem;
 }
 
+.stephs-blog-hero-image{
+  width: 100%;
+  padding-bottom: 100px;
+}
+.fa-paw{
+  font-size: 20px;
+  transform: rotate(45deg);
+}
 /* responsive */
 @media only screen and (max-width:666px) {
+
+  .stephs-blog-hero-image{
+
+    padding-bottom: 50px;
+  }
 
   .sidebar {
     margin: 0;

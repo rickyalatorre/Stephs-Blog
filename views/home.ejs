@@ -1,8 +1,11 @@
 <%- include("partials/header"); -%>
 
+<img class="stephs-blog-hero-image" src="/images/stephs-blog-hero.jpg" ></img>
+
+
 <% postsHome.forEach(function(elem){ %>
   <h1><%= elem.postTitle %></h1>
-  <p><%= elem.postParagraph.substring(0,200)+ "..."; %>
+  <p><%= elem.postParagraph[0].substring(0,200)+ "..."; %>
 
   <a href="https://rocky-reaches-57032.herokuapp.com/posts/<%=elem._id%>">Read more</a>
   </p>

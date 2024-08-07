@@ -17,10 +17,9 @@ mongoose.connect("mongodb+srv://admin-ricky:pulga1160@cluster0.r9wzo.mongodb.net
   useUnifiedTopology: true
 });
 
-const postSchema = new mongoose.Schema({postTitle: String, postParagraph: String});
+const postSchema = new mongoose.Schema({postTitle: String, postParagraph: [String]});
 
 const Post = mongoose.model("Post", postSchema);
-
 
 app.get("/", function(req, res) {
   Post.find({}, function(err, foundItems) {
