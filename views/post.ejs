@@ -2,10 +2,12 @@
 
 <h1> <%= title%> </h1>
 <div class='paragraphs-container'>
-<p>
-  <%= content[0]%>
-</p>
 
+<% content.forEach((e)=>{%>
+  <p class="indent">
+  <%= e %>
+  </p>
+<%})%>
 
 </div>
 

@@ -1,6 +1,7 @@
 <%- include("partials/header"); -%>
 
-<form class="textLeft" action="/oshkosh" method="post">
+<form id='osh-form' class="textLeft" action="/oshkosh" method="post">
+
   <div class="form-group">
     <label for="blogTitle" name="blogTitle"> New Blog Title</label>
     <input id="blogTitle" class="form-control" type="text" name="postTitle" value="" placeholder="enter blog title">
@@ -8,12 +9,11 @@
 
   <div class="form-group">
     <label for="blogParagraph" name="blogParagraph"> New Blog Paragraph</label>
-    <textarea id="blogParagraph" name="postParagraph" class="form-control" placeholder="enter your blog"></textarea>
-
-    <button class='osh-button' type="button" name="button">+</button>
-    <button class='combine' type="button" name="button">example submit.will remove</button>
-
+    <%# <textarea id="blogParagraph" name="postParagraph" class="form-control" placeholder="enter your blog"></textarea> %>
+    <button class="add-paragraph" type="button" name="button">+</button>
+    <div class="paragraphs-container"></div>
   </div>
+
   <button class="btn btn-primary" type="submit" name="button">Post</button>
 
 </form>
