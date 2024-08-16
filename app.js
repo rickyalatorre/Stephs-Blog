@@ -17,7 +17,7 @@ mongoose.connect("mongodb+srv://admin-ricky:pulga1160@cluster0.r9wzo.mongodb.net
   useUnifiedTopology: true
 });
 
-const postSchema = new mongoose.Schema({postTitle: String, paragraphs: [String]});
+const postSchema = new mongoose.Schema({image:String, postTitle: String, paragraphs: [String]});
 
 const Post = mongoose.model("Post", postSchema);
 
@@ -34,7 +34,9 @@ app.post("/oshkosh", function(req, res) {
   console.log('sent to /oshkosh')
   const postTitle = req.body.postTitle;
   const paragraphs = req.body.paragraphs;
+  const image = req.body.image;
   const post =new Post({
+    image: image,
     postTitle: postTitle,
      paragraphs: paragraphs
   });
@@ -53,6 +55,7 @@ app.get("/posts/:postId/", function(req, res) {
 
 Post.findOne({_id:postId}, function(err,post){
     res.render("post", {
+      image:post.image,
      title: post.postTitle,
      content: post.paragraphs
    })

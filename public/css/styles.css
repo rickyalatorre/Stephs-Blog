@@ -99,6 +99,16 @@ h2{
   font-size: 5rem;
 }
 
+.post-hero-image{
+  width: 80%;
+  padding-bottom: 50px;
+}
+
+.post-image-container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
 .stephs-blog-hero-image{
   width: 100%;
   padding-bottom: 100px;
@@ -113,10 +123,17 @@ h2{
 }
 
 /* responsive */
+
+@media only screen and (max-width: 350px) {
+  .post-hero-image{
+    width:100%;
+  }
+  }
+
 @media only screen and (max-width:666px) {
 
-  .stephs-blog-hero-image{
 
+  .stephs-blog-hero-image{
     padding-bottom: 50px;
   }
 
