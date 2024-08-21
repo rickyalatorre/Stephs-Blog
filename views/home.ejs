@@ -5,14 +5,10 @@
 
 <% postsHome.forEach(function(elem){ %>
   <h1><%= elem.postTitle %></h1>
-  <p><%= elem.paragraphs[0].substring(0,200)+ "..."; %>
-
-  <a href="https://rocky-reaches-57032.herokuapp.com/posts/<%=elem._id%>">Read more</a>
+  <p>
+    <%= elem.paragraphs ? elem.paragraphs[0].substring(0, 200) + "..." : "Loading" %>
   </p>
-
-<% }) %>
-
+  <a href="https://rocky-reaches-57032.herokuapp.com/posts/<%= elem._id %>">Read more</a>
+<% }); %>
 
 <%- include("partials/footer"); -%>
-<%# https://rocky-reaches-57032.herokuapp.com/posts %>
-<%# http://localhost:3000/posts/ %>

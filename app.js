@@ -23,6 +23,7 @@ const Post = mongoose.model("Post", postSchema);
 
 app.get("/", function(req, res) {
   Post.find({}, function(err, foundItems) {
+    // console.log('foundItems:',foundItems);
     res.render("home", {
       postsHome: foundItems
     })

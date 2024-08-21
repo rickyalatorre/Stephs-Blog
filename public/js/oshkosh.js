@@ -13,7 +13,6 @@ if(grabContent){
 let addParagraph=document.querySelector(".add-paragraph");
 let paragraphsContainer=document.querySelector(".paragraphs-container");
 let oshForm=document.getElementById("osh-form");
-console.log(addParagraph);
 if(addParagraph){
 addParagraph.addEventListener('click',function(event){
   event.preventDefault();
