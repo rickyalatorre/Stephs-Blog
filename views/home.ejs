@@ -1,14 +1,15 @@
 <%- include("partials/header"); -%>
 
-<img class="stephs-blog-hero-image" src="/images/stephs-blog-hero.jpg" ></img>
+<img class="stephs-blog-hero-image" src="/images/stephs-blog-hero.jpg"></img>
 
 
 <% postsHome.forEach(function(elem){ %>
-  <h1><%= elem.postTitle %></h1>
-  <p>
-    <%= elem.paragraphs ? elem.paragraphs[0].substring(0, 200) + "..." : "Loading" %>
-  </p>
-  <a href="https://rocky-reaches-57032.herokuapp.com/posts/<%= elem._id %>">Read more</a>
-<% }); %>
-
+<h1><%= elem.postTitle %></h1>
+<p>
+  <%= elem.paragraphs[0].substring(0, 200) + "..."%>
+  <a href="http://localhost:3000/posts/<%= elem._id %>">Read more</a>
+  <% }); %>
+</p>
+<%# http://localhost:3000/ %>
+<%# https://rocky-reaches-57032.herokuapp.com %>
 <%- include("partials/footer"); -%>

@@ -19,9 +19,9 @@ addParagraph.addEventListener('click',function(event){
   console.log('clicked add paragraph button');
   let textArea=document.createElement("textArea");
   textArea.name='paragraphs[]';
-  textArea.classList.add('form-control');  // Add the 'form-control' class
-   textArea.rows = 10;  // Set default rows for the textarea
-   textArea.placeholder = "Enter your blog paragraph";  // Add placeholder for better UX
+  textArea.classList.add('form-control');  
+   textArea.rows = 10;
+   textArea.placeholder = "Enter your blog paragraph";
 
   paragraphsContainer.appendChild(textArea);
 });

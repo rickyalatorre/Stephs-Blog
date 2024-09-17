@@ -1,7 +1,20 @@
 body {
-  font-family: 'Raleway', sans-serif;
-}
+  font-family: 'Raleway',system-ui;
 
+  /* line-height: 0.9;
+  font-weight: 400;
+  letter-spacing: 1px;
+  word-spacing: 0.1px;
+  height: auto;
+  visibility: visible;
+  font-family: system-ui; */
+}
+/* .raleway-loaded{
+  font-family: 'Raleway',system-ui;
+  line-height: 0.95;
+  font-weight: 400;
+  visibility: visible;
+} */
 /* Navigation */
 .sidebar {
   width: 25%;
@@ -18,10 +31,10 @@ body {
 .stephsBlog {
   display: block;
   position: relative;
-  font-size: 3rem;
-  font-weight: 600;
+  font-size:38px;
   color: #ff427f;
   padding-left: 20px;
+  padding-top:20px;
 }
 
 .stephsBlog:hover {
@@ -113,9 +126,26 @@ h2{
   width: 100%;
   padding-bottom: 100px;
 }
-.fa-paw{
-  font-size: 20px;
+
+.name-paw-container{
+  /* display:flex;
+  flex-wrap:nowrap;
+  justify-content: flex-start;
+  align-items: center; */
+  width:100%;
+}
+
+.paw-container{
+  display:inline-block;
+  /* border: 2px black solid; */
+  width:24px;
+  height:24px;
   transform: rotate(45deg);
+
+}
+.fa-solid{
+  color:pink;
+  font-size: 20px;
 }
 
 .indent{
@@ -123,16 +153,15 @@ h2{
 }
 
 /* responsive */
+@media (max-width: 1028px) {
+  /* Your CSS rules for large devices */
+  .stephsBlog{
+    font-size: 26px;
+  }
+}
 
-@media only screen and (max-width: 350px) {
-  .post-hero-image{
-    width:100%;
-  }
-  }
 
 @media only screen and (max-width:666px) {
-
-
   .stephs-blog-hero-image{
     padding-bottom: 50px;
   }
@@ -155,8 +184,9 @@ h2{
 
   .stephsBlog {
     display: inline-block;
-    font-size: 2rem;
+    font-size: 20px;
     padding-left: 20px;
+    padding-top: 0;
   }
 
   .mainContainer {
@@ -261,3 +291,9 @@ h2{
 }
 
 }
+
+@media only screen and (max-width: 350px) {
+  .post-hero-image{
+    width:100%;
+  }
+  }
