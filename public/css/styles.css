@@ -16,6 +16,13 @@ body {
   visibility: visible;
 } */
 /* Navigation */
+
+.post-title{
+  font-size:30px;
+}
+.home-post-paragraph{
+  margin-bottom: 50px;
+}
 .sidebar {
   width: 25%;
   height: 100%;
@@ -158,6 +165,9 @@ h2{
   .stephsBlog{
     font-size: 26px;
   }
+  .post-title{
+    font-size:26px;
+  }
 }
 
 
@@ -292,8 +302,16 @@ h2{
 
 }
 
+@media only screen and (max-width: 440px) {
+  .post-title{
+    font-size:18px;
+  }
+  }
+
+
 @media only screen and (max-width: 350px) {
   .post-hero-image{
     width:100%;
   }
+
   }

@@ -4,12 +4,12 @@
 
 
 <% postsHome.forEach(function(elem){ %>
-<h1><%= elem.postTitle %></h1>
-<p>
+<h1 class='post-title'><%= elem.postTitle %></h1>
+<p class='home-post-paragraph'>
   <%= elem.paragraphs[0].substring(0, 200) + "..."%>
   <a href="https://rocky-reaches-57032.herokuapp.com/posts/<%=elem._id%>">Read more</a>
   <% }); %>
 </p>
 <%# http://localhost:3000/ %>
- 
+
 <%- include("partials/footer"); -%>
